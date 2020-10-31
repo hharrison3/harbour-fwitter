@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 let connection;
 
 if (process.env.NODE_ENV === 'production'){
-  connection = my_sql.createConnection(process.env.JAWSDB_URL).promise();
+  connection = mysql.createConnection(process.env.JAWSDB_URL).promise();
 } else {
   connection = mysql.createConnection({
     host: 'localhost',
